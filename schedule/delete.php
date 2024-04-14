@@ -34,7 +34,6 @@ $values =  $stmt->fetchAll(PDO::FETCH_ASSOC); //PDO::FETCH_ASSOC[カラム名の
 </head>
 <body id="main">
 <h3>データを削除しますか？</h3>
-<h4><p><a href="delete02.php?id=<?=h($value["id"])?>" class="linkds">削除する</a></p></h4>
 <div class="card-container">
 <?php foreach($values as $value){ ?>
     <div class="card">
@@ -43,6 +42,7 @@ $values =  $stmt->fetchAll(PDO::FETCH_ASSOC); //PDO::FETCH_ASSOC[カラム名の
         <p><span class="small-font01"><?=$value["naiyou"]?></span></p>
         <p><span class="small-font01"><?=$value["address01"]?><?=$value["address02"]?></span></p>
         <p><span class="small-font02"><?=$value["name"]?>  <?=$value["indate"]?></span></p>
+      <h4><p><a href="delete02.php?id=<?=h($value["id"])?>" class="linkds">削除する</a></p></h4>
     </div>
    
 <?php } ?>
